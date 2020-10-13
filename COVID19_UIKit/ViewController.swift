@@ -20,27 +20,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelPositiveTests: UILabel!
     @IBOutlet weak var labelNegativeTests: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    
-
-
-
     @IBAction func buttonPressed(_ sender: Any) {
         print("Button pressed")
         buttonRefresh.setTitle("Updating...", for: UIControl.State.normal)
         let uploadURL="https://api.covidtracking.com/v1/us/current.json"
         let params:[String:String]=[:]
         debugPrint("Calling the AI service with URL=",uploadURL," and params = ",params)
-        let l = numberWithCommas("100000")
-        print(l)
         
         AF.request(uploadURL).responseJSON { response in
-            
             //debugPrint("AF.Response:",response)
             switch response.result {
             case .success(let value):
@@ -59,17 +51,7 @@ class ViewController: UIViewController {
                 print("\n\n Request failed with error: \(error)")
             }
         }
-
     }
-    
-    func numberWithCommas(_ inputStr: String) -> String {
-        guard let l = Int(inputStr) else { return("Not a number") }
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        guard let s = numberFormatter.string(from: NSNumber(value: l)) else { return "Not formattable" }
-        return s
-    }
-
 }
 
 extension Int {
@@ -80,20 +62,3 @@ extension Int {
     }
 }
 
-/*
-let bigNumber = 1234567890
-let numberFormatter = NumberFormatter()
-numberFormatter.numberStyle = .decimal
-guard let formattedNumber = numberFormatter.string(from: NSNumber(value: bigNumber)) else { return }
-print(formattedNumber)
- 
- //self.states=json[0]["states"].intValue
- self.labelPositiveTests.text="Positive tests : " + json[0]["positive"].stringValue
- self.labelNegativeTests.text="Negative tests: " + json[0]["negative"].stringValue
- self.labelDeaths.text="Deaths: " + json[0]["death"].stringValue
- self.labelTotalTests.text="Total tests: " + json[0]["totalTestResults"].stringValue
- self.labelIncreaseDeaths.text="Increase in deaths: " + json[0]["deathIncrease"].stringValue
- self.buttonRefresh.setTitle("Updated", for: UIControl.State.normal)
- 
- 
-*/
