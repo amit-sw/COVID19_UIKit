@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		AA49815A250817D400CE8CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA498158250817D400CE8CDE /* Main.storyboard */; };
 		AA49815C250817D500CE8CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA49815B250817D500CE8CDE /* Assets.xcassets */; };
 		AA49815F250817D500CE8CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA49815D250817D500CE8CDE /* LaunchScreen.storyboard */; };
+		ABA5BFE0124F8061F1D3932D /* Pods_COVID19_UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45B5799AAC4BB8426C983E4 /* Pods_COVID19_UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B05FC2BF9B9FB46532BA1FC /* Pods-COVID19_UIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19_UIKit.debug.xcconfig"; path = "Target Support Files/Pods-COVID19_UIKit/Pods-COVID19_UIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		A45B5799AAC4BB8426C983E4 /* Pods_COVID19_UIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_COVID19_UIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA49814F250817D400CE8CDE /* COVID19_UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVID19_UIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA498152250817D400CE8CDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA498154250817D400CE8CDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		AA49815B250817D500CE8CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA49815E250817D500CE8CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA498160250817D500CE8CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA498166250817DB00CE8CDE /* COVID19_UIKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = COVID19_UIKit.entitlements; sourceTree = "<group>"; };
+		CBB719E98C20478FFE271601 /* Pods-COVID19_UIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVID19_UIKit.release.xcconfig"; path = "Target Support Files/Pods-COVID19_UIKit/Pods-COVID19_UIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA5BFE0124F8061F1D3932D /* Pods_COVID19_UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DC82E2F786C820554393260 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B05FC2BF9B9FB46532BA1FC /* Pods-COVID19_UIKit.debug.xcconfig */,
+				CBB719E98C20478FFE271601 /* Pods-COVID19_UIKit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA498146250817D400CE8CDE = {
 			isa = PBXGroup;
 			children = (
 				AA498151250817D400CE8CDE /* COVID19_UIKit */,
 				AA498150250817D400CE8CDE /* Products */,
+				8DC82E2F786C820554393260 /* Pods */,
+				CFF3F0C3AA6D5742D3B94675 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +73,7 @@
 		AA498151250817D400CE8CDE /* COVID19_UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				AA498166250817DB00CE8CDE /* COVID19_UIKit.entitlements */,
 				AA498152250817D400CE8CDE /* AppDelegate.swift */,
 				AA498154250817D400CE8CDE /* SceneDelegate.swift */,
 				AA498156250817D400CE8CDE /* ViewController.swift */,
@@ -67,6 +85,14 @@
 			path = COVID19_UIKit;
 			sourceTree = "<group>";
 		};
+		CFF3F0C3AA6D5742D3B94675 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A45B5799AAC4BB8426C983E4 /* Pods_COVID19_UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA498163250817D500CE8CDE /* Build configuration list for PBXNativeTarget "COVID19_UIKit" */;
 			buildPhases = (
+				0EC8F5D94C177632453592C6 /* [CP] Check Pods Manifest.lock */,
 				AA49814B250817D400CE8CDE /* Sources */,
 				AA49814C250817D400CE8CDE /* Frameworks */,
 				AA49814D250817D400CE8CDE /* Resources */,
+				72F625A35157A85B9F089320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -94,7 +122,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "AI Club";
 				TargetAttributes = {
 					AA49814E250817D400CE8CDE = {
@@ -132,6 +160,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EC8F5D94C177632453592C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COVID19_UIKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72F625A35157A85B9F089320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COVID19_UIKit/Pods-COVID19_UIKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-COVID19_UIKit/Pods-COVID19_UIKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-COVID19_UIKit/Pods-COVID19_UIKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA49814B250817D400CE8CDE /* Sources */ = {
@@ -192,6 +262,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +323,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -282,8 +354,10 @@
 		};
 		AA498164250817D500CE8CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B05FC2BF9B9FB46532BA1FC /* Pods-COVID19_UIKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = COVID19_UIKit/COVID19_UIKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4WHYADYH2;
 				INFOPLIST_FILE = COVID19_UIKit/Info.plist;
@@ -293,6 +367,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "world.aiclub.COVID19-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,8 +375,10 @@
 		};
 		AA498165250817D500CE8CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBB719E98C20478FFE271601 /* Pods-COVID19_UIKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = COVID19_UIKit/COVID19_UIKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4WHYADYH2;
 				INFOPLIST_FILE = COVID19_UIKit/Info.plist;
@@ -311,6 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "world.aiclub.COVID19-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
